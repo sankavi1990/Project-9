@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Airnew - ProceedToBuy</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="header">
+  <!-- SECTION 1 : LOGO -->
+  <div class="header-left">
+    <img src="Images/logo.png" alt="Airnew Logo" class="logo">
+    <p class="blink-text">Airnew</p>
+  </div>
+
+  <!-- SECTION 2 : NAV + SEARCH -->
+  <div class="header-center">
+    <nav class="nav">
+      <a href="Home.html" class="nav-link">Home</a>
+      <a href="Products.html" class="nav-link">Products</a>
+      <a href="Gallery.html" class="nav-link">Gallery</a>
+      <a href="Blogs.html" class="nav-link">Blogs</a>
+      <a href="Contactus.html" class="nav-link">Contact us</a>
+      <a href="Aboutus.html" class="nav-link">About us</a>
+    </nav>
+
+    <div class="search-box" onclick="location.href='Products.html'">
+      <input type="text" placeholder="Search" disabled>
+      <i class="fas fa-search"></i>
+    </div>
+  </div>
+
+  <!-- SECTION 3 : ICONS -->
+  <div class="header-right">
+    <img src="Images/user.png" alt="User" class="user-img">
+    <i class="fa-regular fa-heart"></i>
+    <i class="fa-solid fa-cart-shopping"></i>
+    <i class="fa-regular fa-bell"></i>
+  </div>
+</header>
+
+
+
+
+<main class="checkout-container">
+
+  <!-- TITLE -->
+  <h2 class="checkout-title">Billing Check out Details</h2>
+
+  <!-- MAIN SECTION -->
+  <div class="checkout-box">
+
+    <!-- LEFT SIDE -->
+    <div class="checkout-left">
+
+      <!-- IMAGE -->
+      <div class="product-image-box">
+        <img src="Images/headphones.png" alt="Airpad Pro Earband">
+      </div>
+
+      <!-- PRODUCT DETAILS -->
+      <div class="product-details">
+        <p><strong>Product</strong></p>
+        <p>Airpad Pro Earband</p>
+
+        <p><strong>Date</strong></p>
+        <p>22 August 2025</p>
+
+        <p><strong>Price</strong></p>
+        <p class="price">$29</p>
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="order-summary">
+      <h3>Order Summary</h3>
+
+      <div class="summary-row"><span>Items</span><span>1</span></div>
+      <div class="summary-row"><span>Subtotal</span><span>$31</span></div>
+      <div class="summary-row"><span>Shipping</span><span>$0.00</span></div>
+      <div class="summary-row"><span>Taxes</span><span>$0.00</span></div>
+      <div class="summary-row"><span>Coupen Discount</span><span>$2.00</span></div>
+
+      <hr>
+
+      <div class="summary-row total">
+        <span>Total</span><span class="green">$29</span>
+      </div>
+
+      <!-- <a href="ProceedToBuy.html" class="pay-btn">Proceed to Pay</a> -->
+    </div>
+
+  </div>
+
+</main>
+
+
+
+<section class="payment-section">
+  <h2 class="payment-title" onclick="toggleDropdown()">
+    Payment <span id="arrow">˄</span>
+  </h2>
+
+  <!-- Dropdown -->
+  <div class="payment-dropdown" id="paymentDropdown">
+    <label>
+      <input type="radio" name="pay" value="gpay">
+      Google Pay
+    </label>
+    <label>
+      <input type="radio" name="pay" value="phonepe">
+      PhonePe
+    </label>
+    <label>
+      <input type="radio" name="pay" value="paytm">
+      Paytm
+    </label>
+
+    <button class="ok-btn" onclick="confirmPayment()">OK</button>
+  </div>
+
+  <!-- Payment Card -->
+  <div class="payment-card" id="paymentCard">
+    <div class="payment-form1">
+      <label>Name :</label>
+      <input type="text" placeholder="Enter your name">
+
+      <label>Enter UPI ID</label>
+      <input type="text" placeholder="example@upi">
+
+      <button class="proceed-btn1" onclick="completePayment()">Proceed</button>
+
+    </div>
+
+    <div class="payment-logo">
+      <img id="payLogo" src="Images/gpay.png" alt="payment">
+    </div>
+  </div>
+</section>
+
+
+<!-- Bottom Banner Image -->
+<section class="bottom-banner">
+  <img src="Images/headphone.png" alt="Airpad Banner">
+</section>
+
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+  <div class="footer-top">
+
+    <!-- ROW 1 : LOGO -->
+    <div class="footer-col footer-logo">
+      <img src="Images/logo.png" alt="Airnew Logo">
+      <p class="blink-text">Airnew</p>
+    </div>
+
+    <!-- ROW 2 : CUSTOMER SERVICE -->
+    <div class="footer-col">
+      <h4>Customer service</h4>
+      <p>My Account</p>
+      <p>Checkup</p>
+      <p>FAQ</p>
+      <p>Return</p>
+    </div>
+
+    <!-- ROW 3 : COMPANY -->
+    <div class="footer-col">
+      <h4>Company</h4>
+      <p>About us</p>
+      <p>Blogs</p>
+      <p>Contact us</p>
+      <p>policy</p>
+    </div>
+
+    <!-- ROW 4 : OUR INFORMATION -->
+    <div class="footer-col">
+      <h4>Our information</h4>
+      <p>Privacy</p>
+      <p>Terms & Condition</p>
+      <p>Customer Feed back</p>
+    </div>
+
+    <!-- ROW 5 : CONTACT -->
+    <div class="footer-col">
+      <p>Mobile: 123-456-789</p>
+      <p>Email_Airnew@gmail.com</p>
+      <p>Address : 12,,north city-001</p>
+
+      <div class="social-icons">
+        <i class="fa-brands fa-whatsapp"></i>
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- COPYRIGHT -->
+  <div class="footer-bottom">
+    <p>© 2025 airnew.co. All rights reserved.</p>
+    <p class="footer-links">Terms & Conditions | Privacy Policy</p>
+  </div>
+
+</footer>
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
+
